@@ -1,8 +1,8 @@
 module.exports = {
-    HOST : "localhost",
-    USER : "root",
-    PASSWORD : "123qwe!@#",
-    DATABASE : "banconome",
+    HOST : process.env.DB_HOST,
+    USER : process.env.DB_USER,
+    PASSWORD : process.env.DB_PASSWORD,
+    DATABASE : process.env.DB_DATABASE,
     DIALECT : "mysql",
     pool:{
         max: 5,
