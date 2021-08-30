@@ -70,6 +70,11 @@ exports.findOne = (req, res) => {
   
     Endereco.findByPk(id)
       .then(data => {
+        if(data == null){
+          res.status(500).send({
+            message: "Erro ao recuperar o endereco com id=" + id
+          });
+        }
         res.send(data);
       })
       .catch(err => {
