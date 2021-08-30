@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/heitorbarbosaramos/contatos-backend/issues"
   },
-  "homepage": "https://github.com/heitorbarbosaramos/contatos-backend#readme"
+  "homepage": "https://github.com/heitorbarbosaramos/contatos-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
 }
