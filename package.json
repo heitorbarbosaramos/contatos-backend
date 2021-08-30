@@ -1,0 +1,19 @@
+{
+  "name": "contatos-backend",
+  "version": "1.0.0",
+  "description": "Gerenciamento de contatos e enderecos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heitorbarbosaramos/contatos-backend.git"
+  },
+  "author": "Heitor Fernando Barbosa Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heitorbarbosaramos/contatos-backend/issues"
+  },
+  "homepage": "https://github.com/heitorbarbosaramos/contatos-backend#readme"
+}
