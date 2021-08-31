@@ -1,6 +1,5 @@
 module.exports = app => {
     const endereco = require("../controllers/endereco.controller");
-    const viaCep = require('../services/busca.viacep');
 
     var router = require("express").Router();
 
@@ -22,6 +21,8 @@ module.exports = app => {
     router.get("/teste",  (req, res) => {
         res.json({ message: "TESTE, MENSAGEM, OK" });
       });
+
+    router.get("/buscaporcep/cep/:cep", endereco.buscaPorCep);
 
 
     app.use('/api/endereco', router);

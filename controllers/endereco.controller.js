@@ -1,5 +1,9 @@
 const db = require('../models');
 
+const viaCep = require('../services/busca.viacep');
+
+const axios = require('axios');
+
 const Endereco = db.endereco;
 const op = db.Sequelize.Op;
 
@@ -169,6 +173,29 @@ exports.deleteAll = (req, res) => {
         res.status(500).send({
           message:
             err.message || "Ocorreu algum erro ao recuperar os endererecos."
+        });
+      });
+  };
+
+
+  // encontrando um endereco via cep
+  exports.buscaPorCep = (req, res) => {
+    const cep = req.params.cep;
+    axios.get("https://viacep.com.br/ws/" + cep + "/json")
+      .then(data =>{
+       
+        if(data.data.erro){
+          console.log(data.data);
+          res.send({
+            message: "Ocorreu algum erro ao recupera os enderereco via CEP."
+          });
+        }
+        res.send(data.data);
+      })
+      .catch(err => {
+        res.status(500).send({
+          message:
+            err.message || "Ocorreu algum erro ao recupera os enderereco via CEP."
         });
       });
   };
