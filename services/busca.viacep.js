@@ -1,7 +1,12 @@
-import axios from "axios";
+const axios = require('axios');
 
-const viaCep = axios.create({
-    baseURL: "https://viacep.com.br/ws/",
-});
+module.exports = function(){
+    
+    const api = axios.create({
+        baseURL: "https://api.github.com",
+      });
 
-export default viaCep;
+      return api;
+}
+
+

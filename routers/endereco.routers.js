@@ -1,5 +1,6 @@
 module.exports = app => {
     const endereco = require("../controllers/endereco.controller");
+    const viaCep = require('../services/busca.viacep');
 
     var router = require("express").Router();
 
