@@ -25,7 +25,12 @@ module.exports = app => {
 
     router.get("/buscaporcep/cep/:cep", endereco.buscaPorCep);
 
+    // criando um novo cadastro para redes sociais
     router.post("/social/", social.create);
+
+    // recuperando todas as redes sociais
+    router.get("/social/all", social.findAll);
+
 
 
     app.use('/api/endereco', router);

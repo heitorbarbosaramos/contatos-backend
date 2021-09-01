@@ -20,4 +20,10 @@ exports.create = (req, res) => {
 
     });
         
+},
+
+exports.findAll = (req, res) =>{
+    Social.findAll().then(data => {
+        res.send(data);
+    })
 }
