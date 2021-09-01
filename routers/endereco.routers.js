@@ -1,5 +1,6 @@
 module.exports = app => {
     const endereco = require("../controllers/endereco.controller");
+    const social = require("../controllers/social.controller");
 
     var router = require("express").Router();
 
@@ -23,6 +24,8 @@ module.exports = app => {
       });
 
     router.get("/buscaporcep/cep/:cep", endereco.buscaPorCep);
+
+    router.post("/social/", social.create);
 
 
     app.use('/api/endereco', router);

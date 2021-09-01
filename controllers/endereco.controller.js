@@ -187,7 +187,8 @@ exports.deleteAll = (req, res) => {
         if(data.data.erro){
           console.log(data.data);
           res.send({
-            message: "Ocorreu algum erro ao recupera os enderereco via CEP."
+            message:
+              err.message || "Ocorreu algum erro ao recupera os enderereco via CEP."
           });
         }
         res.send(data.data);

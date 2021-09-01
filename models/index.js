@@ -19,5 +19,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.endereco = require('./endereco.model')(sequelize, Sequelize);
+db.social = require('./social.model')(sequelize, Sequelize);
 
 module.exports = db;
